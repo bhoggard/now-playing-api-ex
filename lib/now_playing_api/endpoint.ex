@@ -4,6 +4,7 @@ defmodule NowPlayingApi.Endpoint do
   matching routes, and dispatching responses.
   """
 
+  alias NowPlayingApi.FeedService
   use Plug.Router
 
   # Using Plug.Logger for logging request information
@@ -24,7 +25,9 @@ defmodule NowPlayingApi.Endpoint do
   end
 
   get "/api/counterstream" do
-    send_resp(conn, 200, "counterstream")
+    conn
+    |> put_resp_content_type("application/json")
+    |> send_resp(200, Poison.encode!(FeedService.counterstream))
   end
 
   # A catchall route, 'match' will match no matter the request method,
