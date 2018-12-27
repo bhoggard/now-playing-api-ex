@@ -12,8 +12,11 @@ defmodule NowPlayingApi.Application do
         plug: NowPlayingApi.Endpoint,
         # Set the port per environment, see ./config/MIX_ENV.exs
         options: [port: Application.get_env(:now_playing_api, :port)]
-      )
+      ),
     ]
+
+    :inets.start
+    :ssl.start
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
