@@ -7,13 +7,16 @@ defmodule NowPlayingApi.FeedService do
   require Logger
   
   def counterstream do
-    {:ok, {{'HTTP/1.0', 200, 'OK'}, _headers, body }} = 
-      :httpc.request('http://counterstream.newmusicusa.org:8000/currentsong?sid=1')
-    
-    [composer, title] = body
-      |> to_string
+    [composer, title] = 
+      load_url('http://counterstream.newmusicusa.org:8000/currentsong?sid=1')
       |> String.split(" - ")
     %{title: title, composer: composer}
+  end
+
+  defp load_url(url) do
+    {:ok, {{'HTTP/1.0', 200, 'OK'}, _headers, body }} = 
+      :httpc.request(url)
+    to_string(body)
   end
 end
 
