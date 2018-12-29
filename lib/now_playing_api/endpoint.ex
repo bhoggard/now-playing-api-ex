@@ -25,14 +25,18 @@ defmodule NowPlayingApi.Endpoint do
   end
 
   get "/api/counterstream" do
-    conn
-    |> put_resp_content_type("application/json")
-    |> send_resp(200, Poison.encode!(FeedService.counterstream))
+    send_json(conn, FeedService.counterstream)
   end
 
   # A catchall route, 'match' will match no matter the request method,
   # so a response is always returned, even if there is no route to match.
   match _ do
     send_resp(conn, 404, "oops... Nothing here :(")
+  end
+
+  defp send_json(conn, response_data) do
+    conn
+    |> put_resp_content_type("application/json")
+    |> send_resp(200, Poison.encode!(response_data))
   end
 end
