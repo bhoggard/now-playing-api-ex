@@ -8,13 +8,13 @@ agent:
 blocks:
   - name: Tests
     task:
+      prologue:
+        commands:     
+          - checkout
+          - mix local.rebar --force
+          - mix deps.get
       jobs:
-      - name: Tests
-        task:
-          prologue:
-            commands:     
-              - checkout
-              - mix local.rebar --force
-              - mix deps.get
-        commands:
-          - mix test
+        - name: Tests
+          task:
+          commands:
+            - mix test
