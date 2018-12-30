@@ -10,7 +10,11 @@ blocks:
     task:
       jobs:
       - name: Tests
+        task:
+          prologue:
+            commands:     
+              - checkout
+              - mix local.rebar --force
+              - mix deps.get
         commands:
-          - checkout
-          - mix deps.get
           - mix test
