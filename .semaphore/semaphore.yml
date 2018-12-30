@@ -15,6 +15,5 @@ blocks:
           - mix deps.get
       jobs:
         - name: Tests
-          task:
           commands:
             - mix test
