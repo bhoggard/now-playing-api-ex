@@ -12,4 +12,5 @@ blocks:
       - name: Tests
         commands:
           - checkout
+          - mix deps.get
           - mix test
