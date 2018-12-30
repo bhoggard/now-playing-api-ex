@@ -23,7 +23,8 @@ defmodule NowPlayingApi.MixProject do
   defp deps do
     [
       {:poison, "~> 4.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:exml, "~> 0.1.1"}
     ]
   end
 end

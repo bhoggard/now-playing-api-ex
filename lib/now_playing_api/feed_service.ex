@@ -5,6 +5,7 @@ defmodule NowPlayingApi.FeedService do
   """
 
   require Logger
+  alias NowPlayingApi.Parser
   
   def counterstream do
     [composer, title] = 
@@ -13,8 +14,13 @@ defmodule NowPlayingApi.FeedService do
     %{title: title, composer: composer}
   end
 
+  def dronezone do
+    load_url('http://api.somafm.com/recent/dronezone.tre.xml')
+    |> Parser.parse_somafm
+  end
+
   defp load_url(url) do
-    {:ok, {{'HTTP/1.0', 200, 'OK'}, _headers, body }} = 
+    {:ok, {{_http, 200, 'OK'}, _headers, body }} = 
       :httpc.request(url)
     to_string(body)
   end
