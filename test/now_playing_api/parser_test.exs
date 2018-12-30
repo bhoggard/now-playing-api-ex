@@ -18,4 +18,18 @@ defmodule NowPlayingApi.ParserTest do
     assert title == "Henon's Aurora"
     assert composer == "Forrest Fang"
   end
+
+  test "parsing Q2 json" do
+    {:ok, text} = File.read("test/data/q2.json")
+    %{ title: title, composer: composer } = Parser.parse_q2(text)
+    assert title == "For 2 Akis"
+    assert composer == "Shinya Fukumori"
+  end
+
+  test "parsing YLE json" do
+    {:ok, text} = File.read("test/data/yle.xml")
+    %{ title: title, composer: composer } = Parser.parse_yle(text)
+    assert title == "Rigoletto 3-näytöksinen ooppera (kokonaisesitys).  "
+    assert composer == "Verdi, Giuseppe [1813-1901]"
+  end
 end

@@ -32,6 +32,14 @@ defmodule NowPlayingApi.Endpoint do
     send_json(conn, FeedService.dronezone)
   end
 
+  get "/api/q2" do
+    send_json(conn, FeedService.q2)
+  end
+
+  get "/api/yle" do
+    send_json(conn, FeedService.yle)
+  end
+
   # A catchall route, 'match' will match no matter the request method,
   # so a response is always returned, even if there is no route to match.
   match _ do

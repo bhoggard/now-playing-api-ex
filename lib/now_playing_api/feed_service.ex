@@ -19,6 +19,16 @@ defmodule NowPlayingApi.FeedService do
     |> Parser.parse_somafm
   end
 
+  def q2 do
+    load_url('https://api.wnyc.org/api/v1/whats_on/q2/')
+    |> Parser.parse_q2
+  end
+
+  def yle do
+    load_url('https://yle.fi/radiomanint/LiveXML/r17/item(0).xml')
+    |> Parser.parse_yle
+  end
+
   defp load_url(url) do
     {:ok, {{_http, 200, 'OK'}, _headers, body }} = 
       :httpc.request(url)
