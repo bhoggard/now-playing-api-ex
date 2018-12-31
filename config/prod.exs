@@ -6,4 +6,4 @@ case System.get_env("PORT") do
   nil -> 80 # default port
 end
 
-config :my_app, port: port
+config :now_playing_api, port: port
