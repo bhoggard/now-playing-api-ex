@@ -16,6 +16,12 @@ defmodule NowPlayingApi.Parser do
     %{title: entry["title"], composer: entry["composer"]["name"]}
   end
 
+  def parse_wkcr(text) do
+    doc = Exml.parse(text)
+    title = Exml.get doc, "//channel/item[1]/title"
+    %{title: title, composer: ""}
+  end
+
   def parse_yle(text) do
     doc = Exml.parse(text)
     title = Exml.get doc, "//RMPADEXPORT/ITEM/@TITLE"

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+   <channel>
+		<title>Recent spins on WKCR</title>
+		<link>http://spinitron.com//radio/playlist.php?station=wkcr</link>
+		<description>The most recent songs played on WKCR and logged on Spinitron, WKCR's playlist handling service provider.</description>
+		<language>en-us</language>
+		<pubDate>Sun, 30 Dec 2018 21:53:46 -0500</pubDate>
+		<lastBuildDate>Sun, 30 Dec 2018 21:53:46 -0500</lastBuildDate>
+		<atom:link href="http://spinitron.com/radio/rss.php?station=wkcr" rel="self" type="application/rss+xml"/>
+		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+		<ttl>5</ttl>
+		<item>
+			 <title>Arlene Auger, Julia Hamari, Lutz-Michael Harder, Philippe Huttenlicher, and Helmuth Rilling: 'Cantata BWV 43: "Gott fahret auf mit Jauchzen"'</title>
+			 <description>'Cantata BWV 43: "Gott fahret auf mit Jauchzen"' by Arlene Auger, Julia Hamari, Lutz-Michael Harder, Philippe Huttenlicher, and Helmuth Rilling from CD 92.015 (Hanssler Classic, 1999, Classical, CD) spun at 9:35pm EST Sun Dec 30th 2018 by Julian Vleeschhouwer on Bachfest: Ascension Oratorio and Cantatas, WKCR-FM NY, WKCR HD 1</description>
+			 <pubDate>Sun, 30 Dec 2018 21:35:00 -0500</pubDate>
+			 <link>http://spinitron.com/radio/playlist.php?station=wkcr&amp;plid=13500#307782</link>
+			 <guid isPermaLink="true">http://spinitron.com/radio/playlist.php?station=wkcr&amp;plid=13500#307782</guid>
+			 <source url="http://spinitron.com/radio/rss.php?station=wkcr">Recent spins on WKCR</source>
+		</item>
+		<item>
+			 <title>Ann Monoyios, Daniel Taylor, Frederick Urrey, Christopheren Nomura, and Greg Funfgeld: 'Ascension Oratorio, BWV 11'</title>
+			 <description>'Ascension Oratorio, BWV 11' by Ann Monoyios, Daniel Taylor, Frederick Urrey, Christopheren Nomura, and Greg Funfgeld from DOR-90306 (Dorian Recordings, 2002, Classical, CD) spun at 9:04pm EST Sun Dec 30th 2018 by Julian Vleeschhouwer on Bachfest: Ascension Oratorio and Cantatas, WKCR-FM NY, WKCR HD 1</description>
+			 <pubDate>Sun, 30 Dec 2018 21:04:00 -0500</pubDate>
+			 <link>http://spinitron.com/radio/playlist.php?station=wkcr&amp;plid=13500#307779</link>
+			 <guid isPermaLink="true">http://spinitron.com/radio/playlist.php?station=wkcr&amp;plid=13500#307779</guid>
+			 <source url="http://spinitron.com/radio/rss.php?station=wkcr">Recent spins on WKCR</source>
+		</item>
+		<item>
+			 <title>Aldo Parisot: 'Suite No. 5 for Solo Cello: Prelude and Allemande'</title>
+			 <description>'Suite No. 5 for Solo Cello: Prelude and Allemande' by Aldo Parisot from Suite No. 5 for Solo Cello: Prelude and Allemande (Counterpoint, 1959, Single) spun at 5:58pm EST Sun Dec 30th 2018 by Simon C on BachFest 12/30/18, WKCR-FM NY, WKCR HD 1 -- rereleased digitally 2014 EMG classical</description>
+			 <pubDate>Sun, 30 Dec 2018 17:58:00 -0500</pubDate>
+			 <link>http://spinitron.com/radio/playlist.php?station=wkcr&amp;plid=13497#307776</link>
+			 <guid isPermaLink="true">http://spinitron.com/radio/playlist.php?station=wkcr&amp;plid=13497#307776</guid>
+			 <source url="http://spinitron.com/radio/rss.php?station=wkcr">Recent spins on WKCR</source>
+		</item>
+   </channel>
+</rss>

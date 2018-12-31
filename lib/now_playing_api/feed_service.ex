@@ -24,6 +24,11 @@ defmodule NowPlayingApi.FeedService do
     |> Parser.parse_q2
   end
 
+  def wkcr do
+    load_url('https://spinitron.com/radio/rss.php?station=wkcr')
+    |> Parser.parse_wkcr
+  end
+
   def yle do
     load_url('https://yle.fi/radiomanint/LiveXML/r17/item(0).xml')
     |> Parser.parse_yle

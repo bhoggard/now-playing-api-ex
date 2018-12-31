@@ -40,6 +40,10 @@ defmodule NowPlayingApi.Endpoint do
     send_json(conn, FeedService.q2)
   end
 
+  get "/api/wkcr" do
+    send_json(conn, FeedService.wkcr)
+  end
+
   get "/api/yle" do
     send_json(conn, FeedService.yle)
   end

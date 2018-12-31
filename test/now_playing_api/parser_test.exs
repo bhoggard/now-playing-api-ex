@@ -26,6 +26,13 @@ defmodule NowPlayingApi.ParserTest do
     assert composer == "Shinya Fukumori"
   end
 
+  test "parsing WKCR XML" do
+    {:ok, text} = File.read("test/data/wkcr.xml")
+    %{ title: title, composer: composer } = Parser.parse_wkcr(text)
+    assert title == "Arlene Auger, Julia Hamari, Lutz-Michael Harder, Philippe Huttenlicher, and Helmuth Rilling: 'Cantata BWV 43: \"Gott fahret auf mit Jauchzen\"'"
+    assert composer == ""
+  end
+
   test "parsing YLE json" do
     {:ok, text} = File.read("test/data/yle.xml")
     %{ title: title, composer: composer } = Parser.parse_yle(text)
