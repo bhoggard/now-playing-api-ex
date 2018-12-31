@@ -38,3 +38,6 @@ blocks:
         - name: Everything
           commands:
             - mix test
+promotions:
+  - name: Deploy to Heroku
+    pipeline_file: heroku.yml
