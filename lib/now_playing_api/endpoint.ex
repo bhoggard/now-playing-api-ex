@@ -5,7 +5,11 @@ defmodule NowPlayingApi.Endpoint do
   """
 
   alias NowPlayingApi.FeedService
+
+
   use Plug.Router
+  # CORS
+  plug CORSPlug
 
   # Using Plug.Logger for logging request information
   plug(Plug.Logger)
@@ -17,7 +21,7 @@ defmodule NowPlayingApi.Endpoint do
   plug(Plug.Parsers, parsers: [:json], json_decoder: Poison)
   # responsible for dispatching responses
   plug(:dispatch)
-
+  
   # A simple route to test that the server is up
   # Note, all routes must return a connection as per the Plug spec.
   get "/ping" do
