@@ -25,7 +25,8 @@ defmodule NowPlayingApi.Parser do
   def parse_yle(text) do
     doc = Exml.parse(text)
     title = Exml.get doc, "//RMPADEXPORT/ITEM/@TITLE"
-    [_role, composer] = Exml.get doc, "//RMPADEXPORT/ITEM/ROLES/ROLE[1]"
+    roles_list = Exml.get doc, "//RMPADEXPORT/ITEM/ROLES/ROLE"
+    [_role, composer] = Enum.find(roles_list, fn(i) -> Enum.fetch(i,0) == {:ok, "COMPOSER"} end)
     %{title: title, composer: composer}
   end
 end
