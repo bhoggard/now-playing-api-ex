@@ -37,7 +37,9 @@ defmodule NowPlayingApi.FeedService do
   defp load_url(url) do
     {:ok, {{_http, 200, 'OK'}, _headers, body }} = 
       :httpc.request(url)
-    to_string(body)
+
+    body
+    |> IO.iodata_to_binary
   end
 end
 
