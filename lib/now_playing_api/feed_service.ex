@@ -5,7 +5,7 @@ defmodule NowPlayingApi.FeedService do
   """
 
   require Logger
-  alias NowPlayingApi.Parser
+  alias MusicFeed.Parser
   
   def counterstream do
     [composer, title] = 

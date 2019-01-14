@@ -25,7 +25,8 @@ defmodule NowPlayingApi.MixProject do
       {:poison, "~> 4.0"},
       {:plug_cowboy, "~> 2.0"},
       {:exml, "~> 0.1.1"},
-      {:cors_plug, "~> 2.0"}
+      {:cors_plug, "~> 2.0"},
+      {:music_feed, "~> 0.9.0"}
     ]
   end
 end
