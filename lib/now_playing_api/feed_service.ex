@@ -25,8 +25,9 @@ defmodule NowPlayingApi.FeedService do
   end
 
   def wkcr do
-    load_url('https://spinitron.com/radio/rss.php?station=wkcr')
-    |> Parser.parse_wkcr
+    %{title: "", composer: ""}
+    # load_url('https://spinitron.com/radio/rss.php?station=wkcr')
+    # |> Parser.parse_wkcr
   end
 
   def yle do
