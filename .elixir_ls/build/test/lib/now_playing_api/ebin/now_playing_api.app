@@ -1,9 +1,0 @@
-{application,now_playing_api,
-             [{applications,[kernel,stdlib,elixir,logger,plug_cowboy,poison]},
-              {description,"now_playing_api"},
-              {modules,['Elixir.NowPlayingApi',
-                        'Elixir.NowPlayingApi.Application',
-                        'Elixir.NowPlayingApi.Endpoint']},
-              {registered,[]},
-              {vsn,"0.1.0"},
-              {mod,{'Elixir.NowPlayingApi.Application',[]}}]}.
